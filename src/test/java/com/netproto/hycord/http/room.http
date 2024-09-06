@@ -1,0 +1,34 @@
+### get rooms
+GET http://localhost:8080/api/v1/room
+
+### create rooms
+POST http://localhost:8080/api/v1/room
+Content-Type: application/json
+
+{
+"name": "secondroom",
+  "userId": ""
+}
+
+### get room
+GET http://localhost:8080/api/v1/room/ff241349-15fd-46df-965a-288bc9c90e60
+
+### update room
+PUT http://localhost:8080/api/v1/room/9b684a22-649f-40fa-be02-31c7be654c75
+Content-Type: application/json
+
+{
+"name": "modified"
+}
+
+### get user key
+POST http://localhost:8080/api/v1/user
+Content-Type: application/json
+
+{
+  "name": "lee"
+}
+
+### get user name
+GET http://localhost:8080/api/v1/user/7021af90-b9e0-437b-b1bd-e700cb79e17
+

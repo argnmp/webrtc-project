@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hycord</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="room.js"></script>
+    <script src="conn.js"></script>
+    <script>
+    </script>
+</head>
+<body>
+    <div class="container mx-auto h-screen">
+        <div class="grid md:grid-cols-12 h-full">
+            <div class="md:col-span-3 bg-slate-200">
+                <div>
+                    <input type="text" id="roomName" class="border border-black text-sm" placeholder="roomName"/>
+                    <button type="button" id="createRoom" class="bg-sky-500 hover:bg-sky-700 rounded text-white text-sm">createRoom</button>
+                </div>
+                <div>
+                    <ul id="roomList">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="md:col-span-9">
+                <div>
+                    <button type="button" id="connectBtn" class="bg-sky-500 hover:bg-sky-700 rounded text-white text-sm">connect</button>
+                    <button type="button" id="disconnectBtn" class="bg-red-500 hover:bg-red-700 rounded text-white text-sm">disconnect</button>
+                </div>
+                <div>
+                    <input type="text" id="userName" class="border border-black text-sm" placeholder="name"/>
+                    <input type="text" id="chatMessage" class="border border-black text-sm" placeholder="message"/>
+                    <button id="sendChatBtn" class="bg-green-500 hover:bg-green-700 rounded text-white text-sm">sendChat</button>
+                    <div id="chatBox">
+                    </div>
+                    <div id="streams">
+                        <div>
+                            <span class="text-md text-green-700">local stream</span>
+                            <div id="localStream">
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-md text-green-700">remote stream</span>
+                            <div id="remoteStreams">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
